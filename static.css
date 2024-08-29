@@ -1,0 +1,112 @@
+body, html {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Box Styling */
+.box {
+    position: relative;
+    text-align: center;
+    padding-top: 60px; /* Adjusted to avoid collision with the heading */
+    height: 60vh;
+    width: 40vw;
+    background-color: rgb(255, 247, 213);
+    border: 0.1px solid grey;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+}
+
+.box h1 {
+    background-color: rgb(72, 39, 39);
+    color: white;
+    width: 100%;
+    margin: 0;
+    padding: 2px 0;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    z-index: 1;
+}
+
+/* Task container */
+.task-container {
+    padding: 20px;
+    height: 400px; /* Adjust height as needed */
+    overflow-y: auto; /* Allows scrolling if the list gets long */
+}
+
+/* Task list styling */
+#task-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#task-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+#task-list li:last-child {
+    border-bottom: none;
+    background-color: rgb(255, 250, 227);
+}
+
+/* Task input styling */
+.task-input {
+    position: absolute;
+    bottom: 20px;
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+}
+
+.task-input input {
+    width: 75%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.task-input button {
+    padding: 8px 20px;
+    border: none;
+    background-color: #4661e7;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.task-input button:hover {
+    background-color: #081c8e;
+}
+
+/* Radio buttons and delete buttons styling */
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+.delete-btn {
+    padding: 5px 10px;
+    background-color: rgb(86, 175, 59);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    visibility: hidden; /* Initially hidden */
+}
+
+.delete-btn:hover{
+    background-color: #218838;
+}
+
+.delete-btn.active {
+    visibility: visible; /* Becomes visible when active */
+}
